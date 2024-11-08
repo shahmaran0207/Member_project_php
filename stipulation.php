@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>PHP Member Site</title>
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
-    <script crossorigin="anonymous"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-<div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none" href="/">
-            <img class="me-2" src="images/logo.svg" style="width: 2rem">
-            <span class="fs-4">PHP Member Site</span>
-        </a>
+<?php include 'inc_header.php'; ?>
 
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a aria-current="page" class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">회사 소개</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">회원가입</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">게시판</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">로그인</a></li>
-        </ul>
-
-    </header>
-
-    <main>
-        <h1 class="text-center mt-5">회원 약관 및 개인정보 취급방침 동의</h1>
-        <h4>회원 약관</h4>
-        <textarea class="form-control" cols="30" id="" name="" rows="10">
+<main class="p-5 border rounded-5">
+    <h1 class="text-center">회원 약관 및 개인정보 취급방침 동의</h1>
+    <h4>회원 약관</h4>
+    <textarea class="form-control" cols="30" id="" name="" rows="10">
                 제 1 장 총칙
 
 제 1 조 (목적)
@@ -178,8 +151,8 @@
 
             </textarea>
         <div class="form-check">
-            <input class="form-check-input" id="flexCheckDefault" type="checkbox" value="">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" id="check_member_1" type="checkbox" value="1">
+            <label class="form-check-label" for="check_member_1">
                 위 약관에 동의 하시겠습니까?
             </label>
         </div>
@@ -231,29 +204,27 @@
 
             </textarea>
         <div class="form-check">
-            <input class="form-check-input" id="flexCheckDefault" type="checkbox" value="">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" id="check_member_2" type="checkbox" value="2">
+            <label class="form-check-label" for="check_member_2">
                 위 약관에 동의 하시겠습니까?
             </label>
         </div>
 
         <div class="mt-4 d-flex justify-content-center gap-2">
-            <button class="btn btn-primary w-50">회원가입</button>
+            <button class="btn btn-primary w-50" id="btn_member">회원가입</button>
             <button class="btn btn-secondary w-50">가입 취소</button>
         </div>
 
-        <footer class="footer mt-5 py-3 bg-primary">
-            <div class="container d-flex gap-1">
-                <img src="images/logo.svg" style="width: 5rem" class="me-2">
-                <div class="d-flex flex-column">
-                    <span class="text-bg-primary">2024 PHP Member Site - Jungeun</span>
-                    <span class="text-bg-primary">Park Jung eun</span>
-                </div>
-            </div>
+        <form method="post" name="stipulation_form" action="member_input.php" style="display: none">
+            <input type="hidden" name="chk" value="0">
 
-        </footer>
+        </form>
 
     </main>
 </div>
+
+
+
+<?php include 'inc_footer.php'; ?>
 </body>
 </html>
