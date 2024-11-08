@@ -62,8 +62,10 @@ include 'inc_header.php';
     </div>
 
     <div class="mt-3 d-flex gap-5">
-        <div><input type="file" name="profile" class="form-control"></div>
-
+        <div>
+            <label for="f_photo" class="form-label">프로필 이미지</label>
+            <input type="file" id="f_photo" name="profile" class="form-control">
+        </div>
         <img src="images/person.png" alt="profile_image" class="w-25">
     </div>
 
@@ -76,5 +78,4 @@ include 'inc_header.php';
 
 <?php
 include 'inc_footer.php';
-
 ?>
